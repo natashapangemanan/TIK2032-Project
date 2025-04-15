@@ -1,0 +1,145 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    padding: 0 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff0f5; 
+    color: #4b2e2e;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+
+header {
+    padding: 20px 0;
+    text-align: center;
+}
+
+h1 {
+    color: #b66fa1; 
+    margin-bottom: 15px;
+}
+
+h2 {
+    color: #d88ca4; 
+    border-bottom: 2px solid #d88ca4;
+    padding-bottom: 5px;
+    margin-top: 30px;
+}
+
+h3 {
+    color: #c97494; 
+}
+
+
+nav {
+    margin: 20px 0;
+    text-align: center;
+}
+
+nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #a14c7c;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #d88ca4;
+    color: white;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(200, 160, 180, 0.4), rgba(0, 0, 0, 0));
+}
+
+section {
+    margin: 20px 0;
+    padding: 10px;
+    background-color: #fff8fb; 
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(180, 140, 160, 0.15);
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+button {
+    background-color: #d88ca4;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #b35b84;
+}
+
+body.terang {
+    background-color: #fff0f5; 
+    color: #4b2e2e;
+}
+
+h1.terang, h2.terang, h3.terang, p.terang {
+    color: #4b2e2e; 
+}
+
+section.terang {
+    background-color: #fff8fb; 
+    color: #4b2e2e; 
+}
+
+body.gelap {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.gelap h1,
+body.gelap h2,
+body.gelap h3,
+body.gelap p,
+body.gelap nav a {
+    color: #ffffff; 
+}
+
+body.gelap section {
+    background-color: #333333; 
+    color: #ffffff; 
+}
+
+body.gelap nav a {
+    color: #b35b84;
+}
+
+body.gelap nav a:hover {
+    background-color: #944d6d;
+    color: #ffffff;
+}
+
+body.terang button {
+    background-color: #ff8db1; 
+    color: #ffffff;
+}
+
+body.gelap button {
+    background-color: #444444; 
+    color: #ffffff;
+}
+
+body, section {
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+
+
+
+
