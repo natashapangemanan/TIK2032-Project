@@ -126,7 +126,7 @@ body.gelap nav a:hover {
 }
 
 body.terang button {
-    background-color: #ff8db1; 
+    background-color:#d88ca4; 
     color: #ffffff;
 }
 
@@ -169,4 +169,55 @@ body, section {
     color: #a14c7c;
     margin-bottom: 5px;
     font-family: monospace;
+}
+
+.login, .register {
+    margin: 20px 30%;
+    padding: 1%;
+    background-color: #fff8fb; 
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(180, 140, 160, 0.15);
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.login h3 {
+    color: #d88ca4; 
+    border-bottom: 2px solid #d88ca4;
+    padding-bottom: 5px;
+    margin-top: 30px;
+}
+
+.register h3 {
+    color: #d88ca4; 
+    border-bottom: 2px solid #d88ca4;
+    padding-bottom: 5px;
+    margin-top: 30px;
+}
+
+.login i, .register i{
+    color: #cc0000;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.login-usn, .login-pw, .register-usn, .register-pw{
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+.login-input, .register-input {
+    display: flex;
+    flex-direction: column; 
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.login p, .register p {
+    font-size: 14px;
+    color: #444;
+    margin-top: 10px;
+    text-align: center;
 }
