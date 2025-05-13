@@ -3,21 +3,27 @@ include "database.php";
 
 $register_message = "";
 
-if(isset($_POST['register'])) {
+if (isset($_POST['register'])) {
     $username = $_POST['username'];
     $password = $_POST['password'];
 
     if (empty($username) || empty($password)) {
         $register_message = "Silakan isi username dan password terlebih dahulu.";
     } else {
-    $sql = "INSERT INTO user (username, password) VALUES ('$username', '$password')";
+        $check_sql = "SELECT * FROM user WHERE username = '$username'";
+        $result = $db->query($check_sql);
 
-    if($db->query($sql))  {
-        $register_message = "akun berhasil dibuat. silahkan login!";
-    } else {
-        $register_message = "gagal membuat akun, coba lagi!";
+        if ($result->num_rows > 0) {
+            $register_message = "Akun dengan username tersebut sudah ada, silakan login.";
+        } else {
+            $sql = "INSERT INTO user (username, password) VALUES ('$username', '$password')";
+            if ($db->query($sql)) {
+                $register_message = "Akun berhasil dibuat. Silakan login!";
+            } else {
+                $register_message = "Gagal membuat akun, coba lagi!";
+            }
+        }
     }
-}
 }
 ?>
 
