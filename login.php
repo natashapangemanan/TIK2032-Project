@@ -1,27 +1,24 @@
-<?php
-include "database.php";
+    <?php
+    include "database.php";
 
-$register_message = "";
+    $login_message = "";
 
-if (isset($_POST['register'])) {
-    $username = $_POST['username'];
-    $password = $_POST['password'];
+    if(isset($_POST['login'])) {
+        $username = $_POST['username'];
+        $password = $_POST['password'];
 
-    if (empty($username) || empty($password)) {
-        $register_message = "Silakan isi username dan password terlebih dahulu.";
-    } else {
-        $check_sql = "SELECT * FROM user WHERE username = '$username'";
-        $result = $db->query($check_sql);
-
-        if ($result->num_rows > 0) {
-            $register_message = "Akun dengan username tersebut sudah ada, silakan login.";
+        if (empty($username) || empty($password)) {
+            $login_message = "Silakan isi username dan password terlebih dahulu.";
         } else {
-            $sql = "INSERT INTO user (username, password) VALUES ('$username', '$password')";
-            if ($db->query($sql)) {
-                $register_message = "Akun berhasil dibuat. Silakan login!";
-            } else {
-                $register_message = "Gagal membuat akun, coba lagi!";
-            }
+        $sql = "SELECT * FROM user WHERE username='$username' AND password='$password'";
+        $result = $db->query($sql); 
+
+        if($result->num_rows > 0) {
+            $data = $result->fetch_assoc();
+
+            header("location: index.html");
+        } else {
+                $login_message = "akun tidak ditemukan";
         }
     }
 }
