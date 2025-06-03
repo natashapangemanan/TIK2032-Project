@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
@@ -222,6 +226,57 @@ body, section {
     text-align: center;
 }
 
-html {
-  scroll-behavior: smooth;
+.artikel {
+    background-color: #fff8fb; /* serasi dengan section */
+    border: 1px solid #d88ca4; /* garis border warna pink lembut */
+    border-radius: 12px;        /* sudut membulat sama seperti section */
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 3px 10px rgba(216, 140, 164, 0.2); /* bayangan pink transparan */
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.artikel h3 {
+    color: #c97494; /* warna header h3 seperti style h3 kamu */
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.artikel small {
+    display: block;
+    font-style: italic;
+    color: #a14c7c; /* warna agak gelap untuk info tanggal/author */
+    margin-bottom: 12px;
+}
+
+.artikel p {
+    color: #4b2e2e; /* warna teks utama di body */
+    line-height: 1.7;
+}
+
+.artikel:hover {
+    background-color: #f9e6f0; /* saat hover, latar agak lebih terang pink */
+    box-shadow: 0 5px 15px rgba(216, 140, 164, 0.35);
+    cursor: pointer;
+}
+
+/* Penyesuaian untuk mode gelap (jika pakai class body.gelap) */
+body.gelap .artikel {
+    background-color: #333333;
+    border-color: #944d6d;
+    box-shadow: 0 3px 10px rgba(148, 77, 109, 0.5);
+    color: #ffffff;
+}
+
+body.gelap .artikel h3 {
+    color: #b67ea0;
+}
+
+body.gelap .artikel small {
+    color: #cfa7c0;
+}
+
+body.gelap .artikel:hover {
+    background-color: #4b2e4a;
+    box-shadow: 0 5px 15px rgba(180, 120, 150, 0.6);
 }
